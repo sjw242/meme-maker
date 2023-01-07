@@ -3,9 +3,13 @@ const ctx = canvas.getContext("2d");    //소문자 d
 canvas.width=800;
 canvas.height=800;
 
-ctx.moveTo(50, 50);   // 브러쉬 위치 이동
-ctx.lineTo(150, 50);    // 직전 브러쉬 위치부터 해당 위치까지 선긋기
-ctx.lineTo(150, 150);   
-ctx.lineTo(50, 150);
-ctx.lineTo(50, 50);
-ctx.stroke();       // 선 칠하기
+ctx.fillRect(200, 200, 50, 200);
+ctx.fillRect(400, 200, 50, 200);
+ctx.lineWidth = 2;
+ctx.strokeRect(300, 300, 50, 100);
+ctx.fillRect(200, 200, 200, 20);    // 천장
+
+ctx.moveTo(200, 200);
+ctx.lineTo(325, 100);
+ctx.lineTo(450, 200);       // 이전 위치에서 시작됨
+ctx.fill();
