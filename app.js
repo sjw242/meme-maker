@@ -3,13 +3,15 @@ const ctx = canvas.getContext("2d");    //소문자 d
 canvas.width=800;
 canvas.height=800;
 
-ctx.fillRect(200, 200, 50, 200);
-ctx.fillRect(400, 200, 50, 200);
-ctx.lineWidth = 2;
-ctx.strokeRect(300, 300, 50, 100);
-ctx.fillRect(200, 200, 200, 20);    // 천장
+ctx.fillRect(210, 200, 15, 100);
+ctx.fillRect(350, 200, 15, 100);
+ctx.fillRect(260, 200, 60, 200);
 
-ctx.moveTo(200, 200);
-ctx.lineTo(325, 100);
-ctx.lineTo(450, 200);       // 이전 위치에서 시작됨
+ctx.arc(250, 100, 50, 0, 2 * Math.PI);    // 가로세로위치, 너비, 시작지점, 끝지점
+ctx.fill();
+
+ctx.beginPath();    // 지점 새로 시작하는건 필수
+ctx.arc(260+10, 100, 8, Math.PI, 2 * Math.PI);      // 원 모양 유지하려면 시작지점도 원 수식
+ctx.arc(220+10, 100, 8, Math.PI, 2 * Math.PI);
+ctx.fillStyle = "red";
 ctx.fill();
