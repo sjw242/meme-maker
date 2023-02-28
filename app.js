@@ -17,3 +17,4 @@ function onClick(event){
 
 canvas.addEventListener("click", onClick);
 
+// 다시시작
